@@ -1,0 +1,20 @@
+<h1>Login</h1>
+
+<% if flash[:error] != nil %>
+  <p><%= flash[:error] %></p>
+<% end %>
+  
+<%= form_for @user controller: 'sessions', action: 'create' do %>
+
+      <%= label :name %>
+      <%= text_field :name, params[:name]%>
+
+      <%= label :password %>
+      <%= password_field :password %>
+
+      <%= submit "Sign in"%>
+<% end %>
+
+<!--
+
+-->
